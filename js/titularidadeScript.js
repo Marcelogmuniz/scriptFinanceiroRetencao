@@ -7,9 +7,9 @@ function scriptTroca() {
   const plano = document.querySelector('input[name="plano"]:checked')?.value || "";
   const atualTitular = document.getElementById("atualTitular").value;
   const futuroTitular = document.getElementById("futuroTitular").value;
-  const email = document.getElementById("email").value;
-  const telefone = document.getElementById("telefone").value;
-  const motivo = document.getElementById("motivo").value;
+  const emailTitular = document.getElementById("emailTitular").value;
+  const telefoneTitular = document.getElementById("telefoneTitular").value;
+  const motivoTitular = document.getElementById("motivoTitular").value;
 
   const script = `TROCA DE TITULARIDADE
 
@@ -22,9 +22,9 @@ PLANO E VENCIMENTO PERMANECERÃO O MESMO?  (${plano === "SIM" ? "x" : " "}) SIM 
 
 ATUAL TITULAR: ${atualTitular}
 FUTURO TITULAR: ${futuroTitular}
-EMAIL: ${email}
-TELEFONE: ${telefone}
-MOTIVO DA TROCA DE TITULARIDADE: ${motivo}
+EMAIL: ${emailTitular}
+TELEFONE: ${telefoneTitular}
+MOTIVO DA TROCA DE TITULARIDADE: ${motivoTitular}
 
 CONFIGURAR O PPOE DO CADASTRO ANTERIOR PARA O NOVO.
 O CONTRATO SERÁ CANCELADO APÓS A TROCA SER CONCLUÍDA.`;

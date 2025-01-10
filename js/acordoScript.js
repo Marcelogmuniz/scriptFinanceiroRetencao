@@ -42,6 +42,6 @@ TELEFONE: ${telefone}`;
 function limparEncTecnico() {
   document.getElementById('proposta').value = '';
   document.getElementById('telefone').value = '';
-  document.getElementById('datOS').value = '';
+  document.getElementById('dataOS').value = '';
   document.getElementById('dataPagamento').value = '';
 }
