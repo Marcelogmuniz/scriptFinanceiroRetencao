@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon"
+        href="https://eteccnet.com.br/wp-content/uploads/2021/06/cropped-LOGO-ETECC-VANTAGENS-500X200-4-32x32.png"
+        sizes="32x32">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FINANCEIRO/RETENÇÃO</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-index">
+        <div class="container-fluid justify-content-between">
+            <div class="logo-navbar">
+                <h3>Financeiro / Retenção</h3>
+            </div>
+            <div class="links-navbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" id="pills-ligacao-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-ligacao" type="button" role="tab" aria-controls="pills-ligacao"
+                                aria-selected="true">LIGAÇÃO</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="pills-moto-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-moto" type="button" role="tab" aria-controls="pills-moto"
+                                aria-selected="true">ENC. TÉCNICO</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="pills-carro-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-carro" type="button" role="tab" aria-controls="pills-carro"
+                                aria-selected="true">TROCA DE TITULAR.</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="tab-content mb-3">
+        <!-- ABA SCRIPT -->
+        <div class="div-script container tab-pane fade show active" id="pills-ligacao" role="tabpanel"
+            aria-labelledby="pills-ligacao-tab">
+            <h2 class="text-center mx-auto mb-3">SCRIPT PARA LIGAÇÃO</h2>
+            <div class="mb-3">
+                <label class="form-label">Nome do cliente</label>
+                <input type="text" class="input-script form-control" id="scriptCliente">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Motivo</label>
+                <textarea type="text" class="input-script form-control" id="scriptMotivo"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CPF/CNPJ</label>
+                <input type="text" class="input-script form-control" id="cpf" onkeyup="formatarDocumento()"
+                    maxlength="18">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input type="text" class="input-script form-control" id="tel" onkeyup="formatarTelefone()"
+                    maxlength="15">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Operador</label>
+                <input type="text" class="input-script form-control" id="operador">
+            </div>
+            <button type="button" class="btn btn-copy-script" onclick="copiarScript()">Copiar Script</button>
+            <br>
+            <button type="button" class="btn btn-limpar mb-4" onclick="limparScript()">Limpar</button>
+        </div>
+
+        <!-- ABA ACORDO -->
+        <div class="encTecnico container tab-pane fade" id="pills-moto" role="tabpanel"
+            aria-labelledby="pills-moto-tab">
+            <h2 class="text-center mx-auto">O.S TENTATIVA DE CONTATO</h2>
+            <div class="sides-moto d-flex flex-row justify-content-between w-100 ps-5 pe-5 mt-3 mb-3">
+                <div class="side-moto-a">
+                    <div class="mb-3">
+                        <label class="form-label">Motivo</label>
+                        <textarea class="input-script form-control" rows="3" id="motivo">CLIENTE INADIMPLENTE E SEM CONTATO VIA TELEFONE. 
+VERIFICAR SE O MESMO TEM INTERESSE NA PERMANÊNCIA DOS SERVIÇOS.</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Proposta de Acordo</label>
+                        <input type="text" class="input-script form-control" id="proposta"
+                            placeholder="Proposta de Acordo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Data Limite para Pagamento</label>
+                        <input type="date" class="input-script form-control" id="dataPagamento">
+                    </div>
+                </div>
+
+                <div class="side-moto-b">
+                    <div class="mb-3">
+                        <label class="form-label">Equipamentos</label>
+                        <textarea class="input-script form-control" rows="4" id="equipamentos">ONU + Fonte: comodato
+Roteador + Fonte: comodato
+Cabo de rede + Patch Cord (CABOS)</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Data da O.S</label>
+                        <input type="date" class="input-script form-control" id="dataOS">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Telefone</label>
+                        <input type="tel" class="input-script form-control" id="telefone" placeholder="Telefone">
+                    </div>
+                </div>
+            </div>
+            <div class="button-osmoto d-flex flex-row justify-content-around mb-3 ms-3 me-3">
+                <button type="button" class="btn btn-limpar" onclick="limparEncTecnico()">Limpar O.S</button>
+                <button type="button" class="btn btn-copy-script" onclick="copiarEncTecnico()">Copiar O.S</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TROCA DE TITULARIDADE -->
+    <div class="div-script container tab-pane fade" id="pills-carro" role="tabpanel" aria-labelledby="pills-carro-tab">
+        <h2 class="text-center mb-4">Troca de Titularidade</h2>
+
+        <div class="mb-3">
+            <label class="form-label">Autorizado pelo atual titular?</label>
+            <div>
+                <label><input type="radio" name="autorizado" value="SIM"> SIM</label>
+                <label class="ms-3"><input type="radio" name="autorizado" value="NÃO"> NÃO</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Autorização via:</label>
+            <div>
+                <label><input type="radio" name="autorizacao" value="LIGAÇÃO"> LIGAÇÃO</label>
+                <label class="ms-3"><input type="radio" name="autorizacao" value="HUGGY"> HUGGY</label>
+                <label class="ms-3"><input type="radio" name="autorizacao" value="PRESENCIAL"> PRESENCIAL</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Autorizado com selfie?</label>
+            <div>
+                <label><input type="radio" name="selfie" value="SIM"> SIM</label>
+                <label class="ms-3"><input type="radio" name="selfie" value="NÃO"> NÃO</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Documentos do futuro titular anexados?</label>
+            <div>
+                <label><input type="radio" name="documentos" value="SIM"> SIM</label>
+                <label class="ms-3"><input type="radio" name="documentos" value="NÃO"> NÃO</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Endereço permanecerá o mesmo?</label>
+            <div>
+                <label><input type="radio" name="endereco" value="SIM"> SIM</label>
+                <label class="ms-3"><input type="radio" name="endereco" value="NÃO"> NÃO</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Plano e vencimento permanecerão os mesmos?</label>
+            <div>
+                <label><input type="radio" name="plano" value="SIM"> SIM</label>
+                <label class="ms-3"><input type="radio" name="plano" value="NÃO"> NÃO</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Atual Titular</label>
+            <input type="text" class="input-script form-control" id="atualTitular">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Futuro Titular</label>
+            <input type="text" class="input-script form-control" id="futuroTitular">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="input-script form-control" id="email">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="tel" class="input-script form-control" id="telefone">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Motivo da troca de titularidade</label>
+            <textarea class="input-script form-control" id="motivo" rows="3"></textarea>
+        </div>
+
+        <div class="d-flex gap-3 mb-3">
+            <button type="button" class="btn btn-copy-script w-100" onclick="scriptTroca()">Copiar Script</button>
+            <button type="button" class="btn btn-limpar  w-100" onclick="scriptTroca()">Limpar Script</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/osScript.js"></script>
+    <script src="js/acordoScript.js"></script>
+    <script src="js/titularidadeScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

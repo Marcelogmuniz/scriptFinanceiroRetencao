@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --red-color: #ef233c;
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: #161a1d;
+    color: white;
+}
+
+.navbar-index {
+    background-color: var(--red-color);
+    padding: 1rem 2rem;
+}
+
+.logo-navbar img {
+    width: 8rem;
+    height: auto;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3 ease-in-out;
+    background-color: var(--red-color);
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #8d99ae;
+}
+
+.nav-link:focus {
+    color: #8d99ae;
+}
+
+.div-script {
+    padding: 0;
+    width: 30rem;
+}
+
+.encTecnico {
+    padding: 0;
+    width: 75%;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #fff;
+}
+
+.input-script,
+.form-select:valid {
+    width: 30rem;
+    background-color: transparent;
+    border: 1px solid var(--red-color);
+    box-shadow: 0 0 0 0.1rem var(--red-color);
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+.form-select:valid:focus,
+textarea:valid:focus {
+    background-color: transparent;
+    color: #fff;
+    border-color: var(--red-color);
+    box-shadow: 0 0 0 0.3rem var(--red-color);
+    font-weight: 600;
+}
+
+.btn-copy-script {
+    margin-top: 1rem;
+    width: 30rem;
+    font-weight: 600;
+    background-color: var(--red-color);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-copy-script:hover {
+    background-color: #9E031D;
+    color: #fff;
+}
+
+.btn-limpar {
+    margin-top: 1rem;
+    width: 30rem;
+    font-weight: 600;
+    background-color: #8d99ae;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-limpar:hover {
+    background-color: #616977;
+    color: #fff;
+}
+
+/* ABA SERVIÇOS */
+.modal-content {
+    background-color: #161a1d;
+}
+
+.modal-header button {
+    background-color: var(--red-color);
+}
+
+.btn-copiar {
+    width: 30rem;
+    font-weight: 600;
+    background-color: var(--red-color);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    width: 30rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-copiar:hover {
+    background-color: #9E031D;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    border: 1px solid #fff;
+    color: var(--red-color);
+}
+
+.dropdown-menu li button {
+    background-color: #FF2A30;
+}
