@@ -36,7 +36,7 @@ O CONTRATO SERÁ CANCELADO APÓS A TROCA SER CONCLUÍDA.`;
   });
 }
 
-function limparScript() {
+function limparTroca() {
   document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
   document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea').forEach(input => input.value = "");
 }

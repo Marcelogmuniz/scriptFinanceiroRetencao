@@ -38,3 +38,10 @@ TELEFONE: ${telefone}`;
     .then(() => alert('Script copiado com sucesso!'))
     .catch(() => alert('Falha ao copiar o script.'));
 }
+
+function limparEncTecnico() {
+  document.getElementById('proposta').value = '';
+  document.getElementById('telefone').value = '';
+  document.getElementById('datOS').value = '';
+  document.getElementById('dataPagamento').value = '';
+}
