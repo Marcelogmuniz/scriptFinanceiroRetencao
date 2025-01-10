@@ -39,8 +39,8 @@
                         </li>
                         <li class="nav-item">
                             <button class="nav-link" id="pills-titularidade-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-titularidade" type="button" role="tab" aria-controls="pills-titularidade"
-                                aria-selected="true">TROCA DE TITULAR.</button>
+                                data-bs-target="#pills-titularidade" type="button" role="tab"
+                                aria-controls="pills-titularidade" aria-selected="true">TROCA DE TITULAR.</button>
                         </li>
                     </ul>
                 </div>
@@ -130,89 +130,91 @@ Cabo de rede + Patch Cord (CABOS)</textarea>
                 <button type="button" class="btn btn-copy-script" onclick="copiarEncTecnico()">Copiar O.S</button>
             </div>
         </div>
-    </div>
 
-    <!-- TROCA DE TITULARIDADE -->
-    <div class="div-script container tab-pane fade" id="pills-titularidade" role="tabpanel" aria-labelledby="pills-titularidade-tab">
-        <h2 class="text-center mb-4">Troca de Titularidade</h2>
 
-        <div class="mb-3">
-            <label class="form-label">Autorizado pelo atual titular?</label>
-            <div>
-                <label><input type="radio" name="autorizado" value="SIM"> SIM</label>
-                <label class="ms-3"><input type="radio" name="autorizado" value="NÃO"> NÃO</label>
+        <!-- TROCA DE TITULARIDADE -->
+        <div class="div-script container tab-pane fade" id="pills-titularidade" role="tabpanel"
+            aria-labelledby="pills-titularidade-tab">
+            <h2 class="text-center mb-4">Troca de Titularidade</h2>
+
+            <div class="mb-3">
+                <label class="form-label">Autorizado pelo atual titular?</label>
+                <div>
+                    <label><input type="radio" name="autorizado" value="SIM"> SIM</label>
+                    <label class="ms-3"><input type="radio" name="autorizado" value="NÃO"> NÃO</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Autorização via:</label>
-            <div>
-                <label><input type="radio" name="autorizacao" value="LIGAÇÃO"> LIGAÇÃO</label>
-                <label class="ms-3"><input type="radio" name="autorizacao" value="HUGGY"> HUGGY</label>
-                <label class="ms-3"><input type="radio" name="autorizacao" value="PRESENCIAL"> PRESENCIAL</label>
+            <div class="mb-3">
+                <label class="form-label">Autorização via:</label>
+                <div>
+                    <label><input type="radio" name="autorizacao" value="LIGAÇÃO"> LIGAÇÃO</label>
+                    <label class="ms-3"><input type="radio" name="autorizacao" value="HUGGY"> HUGGY</label>
+                    <label class="ms-3"><input type="radio" name="autorizacao" value="PRESENCIAL"> PRESENCIAL</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Autorizado com selfie?</label>
-            <div>
-                <label><input type="radio" name="selfie" value="SIM"> SIM</label>
-                <label class="ms-3"><input type="radio" name="selfie" value="NÃO"> NÃO</label>
+            <div class="mb-3">
+                <label class="form-label">Autorizado com selfie?</label>
+                <div>
+                    <label><input type="radio" name="selfie" value="SIM"> SIM</label>
+                    <label class="ms-3"><input type="radio" name="selfie" value="NÃO"> NÃO</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Documentos do futuro titular anexados?</label>
-            <div>
-                <label><input type="radio" name="documentos" value="SIM"> SIM</label>
-                <label class="ms-3"><input type="radio" name="documentos" value="NÃO"> NÃO</label>
+            <div class="mb-3">
+                <label class="form-label">Documentos do futuro titular anexados?</label>
+                <div>
+                    <label><input type="radio" name="documentos" value="SIM"> SIM</label>
+                    <label class="ms-3"><input type="radio" name="documentos" value="NÃO"> NÃO</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Endereço permanecerá o mesmo?</label>
-            <div>
-                <label><input type="radio" name="endereco" value="SIM"> SIM</label>
-                <label class="ms-3"><input type="radio" name="endereco" value="NÃO"> NÃO</label>
+            <div class="mb-3">
+                <label class="form-label">Endereço permanecerá o mesmo?</label>
+                <div>
+                    <label><input type="radio" name="endereco" value="SIM"> SIM</label>
+                    <label class="ms-3"><input type="radio" name="endereco" value="NÃO"> NÃO</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Plano e vencimento permanecerão os mesmos?</label>
-            <div>
-                <label><input type="radio" name="plano" value="SIM"> SIM</label>
-                <label class="ms-3"><input type="radio" name="plano" value="NÃO"> NÃO</label>
+            <div class="mb-3">
+                <label class="form-label">Plano e vencimento permanecerão os mesmos?</label>
+                <div>
+                    <label><input type="radio" name="plano" value="SIM"> SIM</label>
+                    <label class="ms-3"><input type="radio" name="plano" value="NÃO"> NÃO</label>
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label">Atual Titular</label>
-            <input type="text" class="input-script form-control" id="atualTitular">
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Atual Titular</label>
+                <input type="text" class="input-script form-control" id="atualTitular">
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Futuro Titular</label>
-            <input type="text" class="input-script form-control" id="futuroTitular">
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Futuro Titular</label>
+                <input type="text" class="input-script form-control" id="futuroTitular">
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="input-script form-control" id="email">
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="input-script form-control" id="email">
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Telefone</label>
-            <input type="tel" class="input-script form-control" id="telefone">
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input type="tel" class="input-script form-control" id="telefone">
+            </div>
 
-        <div class="mb-3">
-            <label class="form-label">Motivo da troca de titularidade</label>
-            <textarea class="input-script form-control" id="motivo" rows="3"></textarea>
-        </div>
+            <div class="mb-3">
+                <label class="form-label">Motivo da troca de titularidade</label>
+                <textarea class="input-script form-control" id="motivo" rows="3"></textarea>
+            </div>
 
-        <div class="d-flex gap-3 mb-3">
-            <button type="button" class="btn btn-copy-script w-100" onclick="scriptTroca()">Copiar Script</button>
-            <button type="button" class="btn btn-limpar  w-100" onclick="scriptTroca()">Limpar Script</button>
+            <div class="d-flex gap-3 mb-3">
+                <button type="button" class="btn btn-copy-script w-100" onclick="scriptTroca()">Copiar Script</button>
+                <button type="button" class="btn btn-limpar  w-100" onclick="scriptTroca()">Limpar Script</button>
+            </div>
         </div>
     </div>
     </div>
