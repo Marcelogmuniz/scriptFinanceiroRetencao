@@ -13,12 +13,12 @@ function scriptTroca() {
 
   const script = `TROCA DE TITULARIDADE
 
-AUTORIZADO PELO ATUAL TITULAR? (${autorizado === "SIM" ? "x" : " "}) SIM  (${autorizado === "NÃO" ? "x" : " "}) NÃO;
-AUTORIZADO VIA (${autorizacao === "LIGAÇÃO" ? "x" : " "})  LIGAÇÃO (${autorizacao === "HUGGY" ? "x" : " "}) HUGGY (${autorizacao === "PRESENCIAL" ? "x" : " "}) PRESENCIAL
-AUTORIZADO COM SELFIE (${selfie === "SIM" ? "x" : " "}) SIM  (${selfie === "NÃO" ? "x" : " "} NÃO);
-DOCUMENTOS DO FUTURO TITULAR ANEXADOS?  (${documentos === "SIM" ? "x" : " "}) SIM  (${documentos === "NÃO" ? "x" : " "}) NÃO;
-ENDEREÇO PERMANECERÁ O MESMO?  (${endereco === "SIM" ? "x" : " "}) SIM  (${endereco === "NÃO" ? "x" : " "}) NÃO;
-PLANO E VENCIMENTO PERMANECERÃO O MESMO?  (${plano === "SIM" ? "x" : " "}) SIM  (${plano === "NÃO" ? "x" : " "}) NÃO;
+AUTORIZADO PELO ATUAL TITULAR? (${autorizado === "SIM" ? "x" : " "}) SIM (${autorizado === "NÃO" ? "x" : " "}) NÃO;
+AUTORIZADO VIA (${autorizacao === "LIGAÇÃO" ? "x" : " "}) LIGAÇÃO (${autorizacao === "HUGGY" ? "x" : " "}) HUGGY (${autorizacao === "PRESENCIAL" ? "x" : " "}) PRESENCIAL
+AUTORIZADO COM SELFIE (${selfie === "SIM" ? "x" : " "}) SIM (${selfie === "NÃO" ? "x" : " "}) NÃO;
+DOCUMENTOS DO FUTURO TITULAR ANEXADOS? (${documentos === "SIM" ? "x" : " "}) SIM (${documentos === "NÃO" ? "x" : " "}) NÃO;
+ENDEREÇO PERMANECERÁ O MESMO? (${endereco === "SIM" ? "x" : " "}) SIM (${endereco === "NÃO" ? "x" : " "}) NÃO;
+PLANO E VENCIMENTO PERMANECERÃO O MESMO? (${plano === "SIM" ? "x" : " "}) SIM (${plano === "NÃO" ? "x" : " "}) NÃO;
 
 ATUAL TITULAR: ${atualTitular}
 FUTURO TITULAR: ${futuroTitular}
