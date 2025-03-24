@@ -14,8 +14,8 @@ function scriptTroca() {
   const script = `TROCA DE TITULARIDADE
 
 AUTORIZADO PELO ATUAL TITULAR? (${autorizado === "SIM" ? "x" : " "}) SIM  (${autorizado === "NÃO" ? "x" : " "}) NÃO;
-(${autorizacao === "LIGAÇÃO" ? "x" : " "}) AUTORIZADO VIA LIGAÇÃO (${autorizacao === "HUGGY" ? "x" : " "}) HUGGY (${autorizacao === "PRESENCIAL" ? "x" : " "}) PRESENCIAL
-(${selfie === "SIM" ? "x" : " "}) AUTORIZADO COM SELFIE;
+AUTORIZADO VIA (${autorizacao === "LIGAÇÃO" ? "x" : " "})  LIGAÇÃO (${autorizacao === "HUGGY" ? "x" : " "}) HUGGY (${autorizacao === "PRESENCIAL" ? "x" : " "}) PRESENCIAL
+AUTORIZADO COM SELFIE (${selfie === "SIM" ? "x" : " "}) SIM  (${selfie === "NÃO" ? "x" : " "} NÃO);
 DOCUMENTOS DO FUTURO TITULAR ANEXADOS?  (${documentos === "SIM" ? "x" : " "}) SIM  (${documentos === "NÃO" ? "x" : " "}) NÃO;
 ENDEREÇO PERMANECERÁ O MESMO?  (${endereco === "SIM" ? "x" : " "}) SIM  (${endereco === "NÃO" ? "x" : " "}) NÃO;
 PLANO E VENCIMENTO PERMANECERÃO O MESMO?  (${plano === "SIM" ? "x" : " "}) SIM  (${plano === "NÃO" ? "x" : " "}) NÃO;
