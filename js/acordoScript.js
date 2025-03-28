@@ -47,7 +47,7 @@ ${equipamentos}
 
 DATA DA O.S.: ${dataOSFormatada}
 
-TELEFONE PARA CONTATO: ${telAcordo}`;
+TELEFONE PARA CONTATO: ${telefone}`;
 
   navigator.clipboard.writeText(texto)
     .then(() => alert('Script copiado com sucesso!'))
