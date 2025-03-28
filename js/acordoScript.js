@@ -1,3 +1,15 @@
+function formatarTelAcordo() {
+  const inputTelAcordo = document.getElementById('telefone');
+  let telAcordo = inputTelAcordo.value.replace(/\D/g, '');
+
+  if (telAcordo.length === 11) {
+      telAcordo = telAcordo.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2 $3');
+  } else if (telAcordo.length === 10 || telAcordo.length === 9) {
+      telAcordo = telAcordo.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+  }
+  inputTelAcordo.value = telAcordo;
+}
+
 function copiarEncTecnico() {
   const dataPagamento = document.getElementById('dataPagamento').value;
 
@@ -17,23 +29,25 @@ function copiarEncTecnico() {
 
   const motivo = document.getElementById('motivo').value
   const proposta = document.getElementById('proposta').value;
+  const valor = document.getElementById('valorAcordo').value;
   const equipamentos = document.getElementById('equipamentos').value;
-  const telefone = document.getElementById('telefone').value;
 
-  const texto = `**CAMPANHA PREVENTIVA DE CLIENTES OFFLINE**
+  const texto = `ORDEM DE SERVIÇO - TENTATIVA DE CONTATO
 
-${motivo}
+MOTIVO DO CONTATO: ${motivo}
 
-PROPOSTA DE ACORDO: ${proposta}
+*PROPOSTA DE ACORDO:*
+- Proposta de acordo: ${proposta}
+- Valor do Acordo: ${valor}
+- Data Limite para Pagamento: ${dataFormatada}
+- Caso o cliente não tenha interesse em regularizar a situação, procederemos com a retirada dos equipamentos.
 
-DATA LIMITE PARA PAGAMENTO: ${dataFormatada}
-
-CASO O MESMO NÃO TENHA INTERESSE, FAZER A RETIRADA DOS EQUIPAMENTOS
-
-TEL.: ${telefone}
-
+*EQUIPAMENTOS A RETIRAR (se aplicável):* 
 ${equipamentos}
-Data da O.S: ${dataOSFormatada}`;
+
+DATA DA O.S.: ${dataOSFormatada}
+
+TELEFONE PARA CONTATO: ${telAcordo}`;
 
   navigator.clipboard.writeText(texto)
     .then(() => alert('Script copiado com sucesso!'))
@@ -42,6 +56,7 @@ Data da O.S: ${dataOSFormatada}`;
 
 function limparEncTecnico() {
   document.getElementById('proposta').value = '';
+  document.getElementById('valorAcordo').value = '';
   document.getElementById('telefone').value = '';
   document.getElementById('dataOS').value = '';
   document.getElementById('dataPagamento').value = '';

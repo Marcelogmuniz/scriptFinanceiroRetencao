@@ -90,14 +90,20 @@
                 <div class="side-moto-a">
                     <div class="mb-3">
                         <label class="form-label">Motivo</label>
-                        <textarea class="input-script form-control" rows="3"
-                            id="motivo">ATENDIMENTO ABERTO PARA TENTATIVA DE CONTATO COM O MESMO, IREI LIGAR 3X, CASO O CLIENTE NÃO ATENDA MANDAREI MENSAGEM NO WHATSAPP, CASO O CLIENTE NÃO RESPONDA ESTAREI ENCAMINHANDO O TÉCNICO ATÉ O LOCAL PARA UMA TENTATIVA DE CONTATO E PROPOSTA DE ACORDO PARA SER PAGO NO ATO DA VISITA</textarea>
+                        <textarea class="input-script form-control" rows="3" id="motivo"
+                            placeholder="Motivo da O.S"></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Proposta de Acordo</label>
                         <input type="text" class="input-script form-control" id="proposta"
                             placeholder="Proposta de Acordo">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Valor do Acordo</label>
+                        <input type="text" class="input-script form-control" id="valorAcordo"
+                            placeholder="Valor do acordo">
                     </div>
 
                     <div class="mb-3">
@@ -109,9 +115,9 @@
                 <div class="side-moto-b">
                     <div class="mb-3">
                         <label class="form-label">Equipamentos</label>
-                        <textarea class="input-script form-control" rows="4" id="equipamentos">ONU + Fonte: comodato
-Roteador + Fonte: comodato
-Cabo de rede + Patch Cord (CABOS)</textarea>
+                        <textarea class="input-script form-control" rows="4" id="equipamentos">- ONU + Fonte: comodato
+- Roteador + Fonte: comodato
+- Cabo de rede + Patch Cord (CABOS)</textarea>
                     </div>
 
                     <div class="mb-3">
@@ -121,7 +127,8 @@ Cabo de rede + Patch Cord (CABOS)</textarea>
 
                     <div class="mb-3">
                         <label class="form-label">Telefone</label>
-                        <input type="tel" class="input-script form-control" id="telefone" placeholder="Telefone">
+                        <input type="tel" class="input-script form-control" id="telefone" placeholder="Telefone"
+                            onkeyup="formatarTelAcordo()" maxlength="15">
                     </div>
                 </div>
             </div>
@@ -131,7 +138,7 @@ Cabo de rede + Patch Cord (CABOS)</textarea>
             </div>
         </div>
 
-
+        
         <!-- TROCA DE TITULARIDADE -->
         <div class="div-script container tab-pane fade" id="pills-titularidade" role="tabpanel"
             aria-labelledby="pills-titularidade-tab">
