@@ -3,34 +3,26 @@ function formatarTelAcordo() {
   let telAcordo = inputTelAcordo.value.replace(/\D/g, '');
 
   if (telAcordo.length === 11) {
-      telAcordo = telAcordo.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2 $3');
+    telAcordo = telAcordo.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2 $3');
   } else if (telAcordo.length === 10 || telAcordo.length === 9) {
-      telAcordo = telAcordo.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    telAcordo = telAcordo.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
   }
+
   inputTelAcordo.value = telAcordo;
 }
 
 function copiarEncTecnico() {
   const dataPagamento = document.getElementById('dataPagamento').value;
-
-  const anoPagamento = dataPagamento.substring(0, 4);
-  const mesPagamento = dataPagamento.substring(5, 7);
-  const diaPagamento = dataPagamento.substring(8, 10);
-
-  const dataFormatada = `${diaPagamento}/${mesPagamento}/${anoPagamento}`;
-
   const dataOS = document.getElementById('dataOS').value;
 
-  const ano = dataOS.substring(0, 4);
-  const mes = dataOS.substring(5, 7);
-  const dia = dataOS.substring(8, 10);
-
-  const dataOSFormatada = `${dia}/${mes}/${ano}`;
-
-  const motivo = document.getElementById('motivo').value
+  const motivo = document.getElementById('motivo').value;
   const proposta = document.getElementById('proposta').value;
-  const valor = document.getElementById('valorAcordo').value;
+  const valor = parseFloat(document.getElementById('valorAcordo').value.replace(',', '.')).toFixed(2).replace('.', ',');
   const equipamentos = document.getElementById('equipamentos').value;
+  const telefone = document.getElementById('telefone').value;
+
+  const dataFormatada = formatarData(dataPagamento);
+  const dataOSFormatada = formatarData(dataOS);
 
   const texto = `ORDEM DE SERVIÇO - TENTATIVA DE CONTATO
 
@@ -55,9 +47,17 @@ TELEFONE PARA CONTATO: ${telefone}`;
 }
 
 function limparEncTecnico() {
+  document.getElementById('motivo').value = '';
   document.getElementById('proposta').value = '';
   document.getElementById('valorAcordo').value = '';
   document.getElementById('telefone').value = '';
   document.getElementById('dataOS').value = '';
   document.getElementById('dataPagamento').value = '';
+  document.getElementById('equipamentos').value = '- ONU + Fonte: comodato\n- Roteador + Fonte: comodato\n- Cabo de rede + Patch Cord (CABOS)';
+}
+
+function formatarData(dataString) {
+  if (!dataString) return '';
+  const dataObj = new Date(dataString);
+  return dataObj.toLocaleDateString('pt-BR');
 }

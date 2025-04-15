@@ -42,6 +42,11 @@
                                 data-bs-target="#pills-titularidade" type="button" role="tab"
                                 aria-controls="pills-titularidade" aria-selected="true">TROCA DE TITULAR.</button>
                         </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="pills-vencimento-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-vencimento" type="button" role="tab"
+                                aria-controls="pills-vencimento" aria-selected="true">MUDANÇA VENC.</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +56,7 @@
     <br>
 
     <div class="tab-content mb-3">
-        <!-- ABA SCRIPT -->
+        <!-- ABA SCRIPT LIGAÇÃO -->
         <div class="div-script container tab-pane fade show active" id="pills-ligacao" role="tabpanel"
             aria-labelledby="pills-ligacao-tab">
             <h2 class="text-center mx-auto mb-3">SCRIPT PARA LIGAÇÃO</h2>
@@ -138,7 +143,6 @@
             </div>
         </div>
 
-        
         <!-- TROCA DE TITULARIDADE -->
         <div class="div-script container tab-pane fade" id="pills-titularidade" role="tabpanel"
             aria-labelledby="pills-titularidade-tab">
@@ -223,12 +227,36 @@
                 <button type="button" class="btn btn-limpar  w-100" onclick="limparTroca()">Limpar Script</button>
             </div>
         </div>
+
+        <!-- MUDANÇA DE VENCIMENTO -->
+        <div class="div-script container tab-pane fade" id="pills-vencimento" role="tabpanel"
+            aria-labelledby="pills-vencimento-tab">
+            <h2 class="text-center mx-auto mb-3">MUDANÇA DE VENCIMENTO</h2>
+            <div class="mb-3">
+                <label class="form-label">Vencimento atual / Data atual</label>
+                <input type="date" class="input-script form-control input-venc" id="vencAtual">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Novo vencimento</label>
+                <input type="date" class="input-script form-control input-venc" id="vencNovo">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Valor do plano</label>
+                <input type="text" class="input-script form-control input-venc" id="valorPlano">
+            </div>
+            <hr>
+            <div class="mb-3">
+                <label class="form-label">Valor do plano com proporcional:</label>
+                <input class="input-script form-control input-venc" type="text" value="" id="resultadoVenc" aria-label="Disabled input example" disabled readonly>
+            </div> 
+        </div>
     </div>
     </div>
 
     <script src="js/osScript.js"></script>
     <script src="js/acordoScript.js"></script>
     <script src="js/titularidadeScript.js"></script>
+    <script src="js/mudancaVenc.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
