@@ -17,7 +17,7 @@ function copiarEncTecnico() {
 
   const motivo = document.getElementById('motivo').value;
   const proposta = document.getElementById('proposta').value;
-  const valor = parseFloat(document.getElementById('valorAcordo').value.replace(',', '.')).toFixed(2).replace('.', ',');
+  const valor = document.getElementById('valorAcordo').value;
   const equipamentos = document.getElementById('equipamentos').value;
   const telefone = document.getElementById('telefone').value;
 
